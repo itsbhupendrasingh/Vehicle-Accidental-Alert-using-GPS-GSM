@@ -1,5 +1,5 @@
 /*
- * designed by Bhupedra Singh
+ * designed by Bhupendra Singh
  * SME Dehradun
  */
 const int x=A0, y=A1, z=14;
