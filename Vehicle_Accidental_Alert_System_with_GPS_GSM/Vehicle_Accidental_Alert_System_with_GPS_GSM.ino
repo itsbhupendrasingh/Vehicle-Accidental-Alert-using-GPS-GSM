@@ -155,8 +155,9 @@ static void print_date(TinyGPS &gps)
   }
   delay(0);
 }
-/* open it if you are using piezo sensor
-void piezo()
+
+/* 
+void piezo() //open it if you are using piezo sensor
 {
   pv=analogRead(p);
   if(pv>400)
