@@ -1,5 +1,5 @@
 /*
- * designed by Bhupendra Singh
+ * designed by Bhupedra Singh
  * SME Dehradun
  */
 const int x=A0, y=A1, z=14;
@@ -10,6 +10,7 @@ int xv=0, yv=0, zv=0;
 TinyGPS gps;
 SoftwareSerial gps_port(2,3); 
 char sz[32];
+int p=A4, pv; //piezo
 int fr = 10, fv; //fire
 int buzzer=9; //need to be defined
 float latitude, longitude;
@@ -30,6 +31,7 @@ void loop()
   encode_gps();
   fire();
   adxl();
+//  piezo(); //open it if you are using piezo sensor
   delay(100);
 }
 
@@ -117,7 +119,7 @@ void adxl()
   }
   else
   {
-    // do nothing
+    
   }
 }
 
@@ -131,7 +133,7 @@ void fire()
   }
   else
   {
-    //do nothing
+    delay(10);
   }
   delay(100);
 }
@@ -144,7 +146,7 @@ static void print_date(TinyGPS &gps)
   gps.crack_datetime(&year, &month, &day, &hour, &minute, &second, &hundredths, &age);
   if (age == TinyGPS::GPS_INVALID_AGE)
   {
-    // do nothing
+    
   }
   else
   {
@@ -153,3 +155,17 @@ static void print_date(TinyGPS &gps)
   }
   delay(0);
 }
+/* open it if you are using piezo sensor
+void piezo()
+{
+  pv=analogRead(p);
+  if(pv>400)
+  {
+    Accident_sms();
+  }
+  else
+  {
+    delay(10);
+  }
+}
+*/
