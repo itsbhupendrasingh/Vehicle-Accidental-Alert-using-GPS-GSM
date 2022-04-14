@@ -2,7 +2,7 @@
  * designed by Bhupedra Singh
  * SME Dehradun
  */
-const int x=A0, y=A1, z=14;
+const int x=A0, y=A1, z=A2;
 int xv=0, yv=0, zv=0;
 
 #include <TinyGPS.h>
