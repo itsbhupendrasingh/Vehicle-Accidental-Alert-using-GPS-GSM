@@ -1,6 +1,7 @@
 /*
  * designed by Bhupedra Singh
- * SME Dehradun
+ * SME Dehradun 
+ * for any query, drop us mail at schematicslab@gmail.com
  */
 const int x=A0, y=A1, z=A2;
 int xv=0, yv=0, zv=0;
@@ -42,7 +43,7 @@ void Fire_sms()
   delay(2000);
   Serial.println("AT+CMGF=1");
   delay(2000);
-  Serial.println("AT+CMGS=\"+919927715123\"\r"); // Replace your mobile no here
+  Serial.println("AT+CMGS=\"+91**********\"\r"); // Replace your mobile no here in which you want to receive sms
   delay(2000);
   Serial.print("Car Fire Alert at ");
   Serial.print("http://www.google.com/maps/place/");
@@ -64,7 +65,7 @@ void Accident_sms()
   delay(2000);
   Serial.println("AT+CMGF=1"); 
   delay(2000);
-  Serial.println("AT+CMGS=\"+919927715123\"\r"); // Replace your mobile no here
+  Serial.println("AT+CMGS=\"+91**********\"\r"); // Replace your mobile no here in which you want to receive sms
   delay(2000);
   Serial.print("Car Accident Alert at ");
   Serial.print("http://www.google.com/maps/place/");
